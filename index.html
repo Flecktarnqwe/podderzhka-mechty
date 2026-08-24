@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Поддержите мою мечту</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+  <main class="page">
+    <article class="card">
+      <section class="hero">
+        <header class="card-header">
+          <button class="header-support" type="button" data-action="donate">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+            Поддержать
+          </button>
+        </header>
+        <div class="hero-content">
+          <p class="hero-tagline">Каждый вклад приближает мечту</p>
+          <h1 class="hero-title">
+            Поддержите мою мечту<br>
+            <span class="hero-title-accent">вместе мы можем больше</span>
+          </h1>
+          <div class="hero-divider"></div>
+          <p class="hero-description">
+            Я работаю над проектом, который для меня по-настоящему важен. Ваша поддержка
+            поможет воплотить эту мечту в жизнь — каждый рубль приближает нас к цели.
+            Спасибо, что вы рядом!
+          </p>
+          <button class="btn-primary" type="button" data-action="donate">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+            Поддержать мечту
+          </button>
+          <p class="hero-note">Любая сумма важна. Спасибо каждому! 💙</p>
+        </div>
+        <div class="hero-image" role="img" aria-label="Человек смотрит на горы на рассвете"></div>
+      </section>
+
+      <section class="stats-bar" aria-label="Прогресс сбора">
+        <div class="stats-collected">
+          <span class="stats-label">СОБРАНО</span>
+          <span class="stats-amount stats-infinity" id="collected-amount" aria-label="Бесконечность">&#8734;</span>
+          <span class="stats-goal">из <span id="goal-amount"></span></span>
+        </div>
+
+        <div class="stats-progress">
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            <span class="progress-percent" id="progress-percent">0%</span>
+          </div>
+          <p class="progress-remaining">ещё <span id="remaining-amount">67 550 ₽</span> до цели</p>
+        </div>
+
+        <div class="stats-icons">
+          <div class="stat-item">
+            <svg class="stat-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/>
+            </svg>
+            <span class="stat-value" id="supporters-count">0</span>
+            <span class="stat-caption">поддержали</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <svg class="stat-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+            <span class="stat-value" id="comments-count">0</span>
+            <span class="stat-caption">комментария</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="quote-section">
+        <blockquote class="quote">
+          <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z" fill="currentColor"/>
+          </svg>
+          Мечты не работают, пока не работаешь ты.
+        </blockquote>
+        <p class="thank-you">
+          Спасибо, что вы со мной!
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+          </svg>
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Модальное окно пожертвования -->
+  <dialog class="donate-modal" id="donate-modal">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
+
+      <div class="modal-step" id="step-amount">
+        <h2>Поддержать мечту</h2>
+        <p class="modal-subtitle">Выберите сумму или введите свою</p>
+
+        <div class="donate-form" id="donate-form">
+          <div class="amount-presets">
+            <button type="button" class="amount-btn" data-amount="100">100 ₽</button>
+            <button type="button" class="amount-btn" data-amount="500">500 ₽</button>
+            <button type="button" class="amount-btn" data-amount="1000">1 000 ₽</button>
+            <button type="button" class="amount-btn" data-amount="5000">5 000 ₽</button>
+          </div>
+
+          <label class="amount-input-label">
+            <span>Своя сумма</span>
+            <input type="number" id="custom-amount" placeholder="0" min="1" step="1">
+            <span class="currency">₽</span>
+          </label>
+
+          <label class="name-input-label">
+            <span>Ваше имя (необязательно)</span>
+            <input type="text" id="donor-name" placeholder="Как вас назвать?">
+          </label>
+
+          <button class="btn-primary btn-submit" type="button" id="submit-donation" disabled>
+            Оплатить через СБП
+          </button>
+        </div>
+
+        <div class="payment-panel" id="payment-panel" hidden>
+          <p class="payment-amount" id="payment-amount">500 ₽</p>
+
+          <div class="qr-wrapper">
+            <canvas class="qr-canvas" id="qr-canvas" hidden></canvas>
+            <img class="qr-image" id="qr-image" alt="QR-код СБП" hidden>
+          </div>
+
+          <p class="qr-hint" id="qr-hint">Отсканируйте QR-код в приложении банка</p>
+          <p class="modal-note" id="payment-note"></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.js"></script>
+  <script src="js/config.js?v=2"></script>
+  <script src="js/sbp.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
