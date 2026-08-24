@@ -572,6 +572,59 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.payment-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.payment-divider::before,
+.payment-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.payment-phone {
+  padding: 1rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.payment-phone-label {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.payment-phone-number {
+  display: inline-block;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.payment-phone-number:hover {
+  color: var(--blue-dark);
+}
+
+.payment-phone-hint {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .stats-bar {

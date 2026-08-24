@@ -90,10 +90,27 @@ function initDonateModal() {
     showStaticQr(amount);
   }
 
+  function updatePaymentPhone() {
+    const phoneLink = document.getElementById('payment-phone');
+    if (!SBP.phoneNumber) return;
+
+    const formatted = formatPhoneNumber(SBP.phoneNumber);
+    const digits = SBP.phoneNumber.replace(/\D/g, '');
+    const tel = digits.length === 11 && digits[0] === '8'
+      ? '+7' + digits.slice(1)
+      : digits.length === 11 && digits[0] === '7'
+        ? '+' + digits
+        : digits;
+
+    phoneLink.textContent = formatted;
+    phoneLink.href = 'tel:' + tel;
+  }
+
   async function showPaymentPanel(amount) {
     donateForm.hidden = true;
     paymentPanel.hidden = false;
     document.getElementById('payment-amount').textContent = formatAmount(amount);
+    updatePaymentPhone();
 
     try {
       await renderDynamicQr(amount);
